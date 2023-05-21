@@ -4,18 +4,31 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JamesTabs.UI.Forms
+namespace JamesTabs.UI.Components
 {
-    public partial class TaskForm : Form
-    {
-        public TaskForm()
-        {
-            InitializeComponent(); 
+	public partial class YoutubeViedoPlayer : UserControl
+	{
+
+		private static YoutubeViedoPlayer _instance;
+		public static YoutubeViedoPlayer Instance
+		{
+			get
+			{
+				if (_instance == null)
+				{
+					_instance = new YoutubeViedoPlayer();
+				}
+				return _instance;
+			}
+		}
+
+		public YoutubeViedoPlayer()
+		{
+			InitializeComponent();
 		}
 
 		private void btnSearch_Click(object sender, EventArgs e)

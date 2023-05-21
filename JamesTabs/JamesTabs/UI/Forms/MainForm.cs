@@ -61,5 +61,19 @@ namespace JamesTabs.UI.Forms
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-    }
+
+		private void btnYoutubeVideoPlayer_Click(object sender, EventArgs e)
+		{
+			if (pnlContant.Controls.Contains(YoutubeViedoPlayer.Instance) == false)
+			{
+				pnlContant.Controls.Add(YoutubeViedoPlayer.Instance);
+				YoutubeViedoPlayer.Instance.Dock = DockStyle.Fill;
+				YoutubeViedoPlayer.Instance.BringToFront();
+			}
+			else
+			{
+				YoutubeViedoPlayer.Instance.BringToFront();
+			}
+		}
+	}
 }

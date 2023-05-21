@@ -17,7 +17,7 @@ namespace JamesTabs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TaskForm());
+            Application.Run(new MainForm());
         }
     }
 }

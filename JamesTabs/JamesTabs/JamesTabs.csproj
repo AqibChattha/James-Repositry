@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>JC.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.2.2.5\lib\net471\MySqlConnector.dll</HintPath>
@@ -88,6 +91,12 @@
     <Compile Include="UI\Components\JamesTodo.Designer.cs">
       <DependentUpon>JamesTodo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Components\YoutubeViedoPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Components\YoutubeViedoPlayer.Designer.cs">
+      <DependentUpon>YoutubeViedoPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +130,9 @@
     <EmbeddedResource Include="UI\Components\JamesTodo.resx">
       <DependentUpon>JamesTodo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Components\YoutubeViedoPlayer.resx">
+      <DependentUpon>YoutubeViedoPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +156,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="JC.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
